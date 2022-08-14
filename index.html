@@ -11,6 +11,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+
+    <script defer type="module" src="src\controller.js"></script>
     <title>CALIFORNIA</title>
   </head>
   <body>
@@ -36,6 +38,23 @@
             <li class="header-solutions">
               <span class="header-solutions-span">SOLUTIONS </span>
               <img src="svg\pointerDown.svg" alt="" />
+              <ul id="header-submenu">
+                <li class="header-submenu-li">
+                  <a id="sub1" href="#">NOTEBOOKS</a>
+                </li>
+                <li class="header-submenu-li">
+                  <a id="sub1" href="#">SMARTPHONES</a>
+                </li>
+                <li class="header-submenu-li">
+                  <a id="sub1" href="#">TABLETS</a>
+                </li>
+                <li class="header-submenu-li">
+                  <a id="sub1" href="#">HANDWATCHES</a>
+                </li>
+                <li class="header-submenu-li">
+                  <a id="sub1" href="#">ACCESSORIS</a>
+                </li>
+              </ul>
             </li>
             <li>
               <a href="#"><span>ABOUT</span></a>
@@ -46,44 +65,76 @@
           </ul>
         </nav>
         <div class="header-searchAndBasketIcons">
-          <div class="header-search">
+          <button class="header-search">
             <img src="svg\lookingGlass.svg" alt="" />
-          </div>
-          <div class="header-basket"><img src="svg\cart.svg" alt="" /></div>
+          </button>
+          <button class="header-basket">
+            <img src="svg\cart.svg" alt="" />
+          </button>
         </div>
       </header>
 
-      <section class="slider-block">
+      <section class="slider-block reveal">
         <div class="slider">
-          <div class="slider-arrow">
+          <button class="sliderBtn sliderBtn-left">
             <img src="svg\arrowLeft.svg" alt="" />
+          </button>
+          <div class="slide slide-1">
+            <div class="slider-textBlock">
+              <h2>The new phones are here take a look</h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed
+                quam reprehenderit cum, aliquid dolore laudantium distinctio
+                perferendis repellendus nemo earum.
+              </p>
+              <div class="slider-exploreBtn"><span>Explore</span></div>
+            </div>
+            <div class="slider-pic">
+              <img src="img\phones.png" alt="smartphone" />
+            </div>
           </div>
-          <div class="slider-textBlock">
-            <h2>The new phones are here take a look</h2>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed quam
-              reprehenderit cum, aliquid dolore laudantium distinctio
-              perferendis repellendus nemo earum.
-            </p>
-            <div class="slider-exploreBtn"><span>Explore</span></div>
+          <div class="slide slide-2">
+            <div class="slider-textBlock">
+              <h2>Best prices for all notebooks</h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed
+                quam reprehenderit cum, aliquid dolore laudantium distinctio
+                perferendis repellendus nemo earum.
+              </p>
+              <div class="slider-exploreBtn"><span>Explore</span></div>
+            </div>
+            <div class="slider-pic">
+              <img src="img\notebooks.png" alt="notebooks" />
+            </div>
           </div>
-          <div class="slider-pic">
-            <img src="img\phones.png" alt="smartphone" />
+          <div class="slide slide-3">
+            <div class="slider-textBlock">
+              <h2>All latest models of tablets</h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed
+                quam reprehenderit cum, aliquid dolore laudantium distinctio
+                perferendis repellendus nemo earum.
+              </p>
+              <div class="slider-exploreBtn"><span>Explore</span></div>
+            </div>
+            <div class="slider-pic">
+              <img src="img\tablets.png" alt="tablets" />
+            </div>
           </div>
-          <div class="slider-arrow slider-right">
+          <button class="sliderBtn sliderBtn-right">
             <img src="svg\arrowRight.svg" alt="" />
-          </div>
+          </button>
           <div class="slider-tabs">
-            <div class="tab tab1 active"></div>
-            <div class="tab tab2"></div>
-            <div class="tab tab3"></div>
+            <!-- <button class="tab tab-1 tab-active"></button>
+            <button class="tab tab-2"></button>
+            <button class="tab tab-3"></button> -->
           </div>
         </div>
       </section>
 
       <main>
         <section class="content">
-          <article class="latest-offers">
+          <article class="latest-offers reveal">
             <h3 class="content-header">
               Shop our latest offers and categories
             </h3>
@@ -144,7 +195,7 @@
               </div>
             </div>
           </article>
-          <article class="most-selled">
+          <article class="most-selled reveal">
             <h3 class="content-header">Save on our most selled items.</h3>
             <p>Our new Limited Edition Winter Design BESPOKE 4-Door Flex™</p>
             <div class="most-selled-items d-flex">
@@ -202,7 +253,7 @@
               </div>
             </div>
           </article>
-          <article class="best">
+          <article class="best reveal">
             <h3 class="content-header">See the best around here</h3>
             <p>Our new Limited Edition Winter Design BESPOKE 4-Door Flex™</p>
             <div class="best-items d-flex">
@@ -235,7 +286,7 @@
               </div>
             </div>
           </article>
-          <article class="ideas">
+          <article class="ideas reveal">
             <h3 class="content-header">Ideas have a place here</h3>
             <p>Our new Limited Edition Winter Design BESPOKE 4-Door Flex™</p>
             <div class="ideas-content d-flex">
@@ -258,7 +309,7 @@
         </section>
       </main>
 
-      <section class="search">
+      <section class="search reveal">
         <h3 class="content-header">Looking for anything else?</h3>
 
         <div class="search-input">
@@ -266,18 +317,18 @@
           <input type="search" placeholder="Search keyword" />
         </div>
         <div class="lastSearches">
-          <span class="searchItem"><a href="#">IPhone</a></span>
-          <span class="searchItem"><a href="#">Charger</a></span>
-          <span class="searchItem"><a href="#">Gift</a></span>
-          <span class="searchItem"><a href="#">Google Pixel</a></span>
-          <span class="searchItem"><a href="#">Keyboard</a></span>
-          <span class="searchItem"><a href="#">13 Pro Max</a></span>
-          <span class="searchItem"><a href="#">IPhone 12</a></span>
-          <span class="searchItem"><a href="#">Laptop</a></span>
-          <span class="searchItem"><a href="#">Mobile</a></span>
+          <a class="searchItem" href="#">IPhone</a>
+          <a class="searchItem" href="#">Charger</a>
+          <a class="searchItem" href="#">Gift</a>
+          <a class="searchItem" href="#">Google Pixel</a>
+          <a class="searchItem" href="#">Keyboard</a>
+          <a class="searchItem" href="#">13 Pro Max</a>
+          <a class="searchItem" href="#">IPhone 12</a>
+          <a class="searchItem" href="#">Laptop</a>
+          <a class="searchItem" href="#">Mobile</a>
         </div>
       </section>
-      <section class="sign-up">
+      <section class="sign-up reveal">
         <h3 class="content-header">Never miss a thing</h3>
         <p>
           Sign up for texts to be notified about our best offers on the perfect
@@ -349,6 +400,18 @@
           <span><b>Powered by</b>: Webflow</span>
         </div>
       </footer>
+      <div class="basket">
+        <div class="basket-modal">
+          <div class="basket-modal-top">
+            <h2>Basket</h2>
+            <button class="basket-modal-closeBtn">X</button>
+          </div>
+          <div class="basket-modal-main">
+            <h2 class="basket-header">Your basket is empty</h2>
+          </div>
+        </div>
+      </div>
+      <div class="overlay"></div>
     </div>
   </body>
 </html>
