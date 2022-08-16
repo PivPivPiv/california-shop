@@ -80,11 +80,6 @@ body {
   margin: auto;
 }
 
-.body svg {
-  /* width: 25px;
-  height: 25px; */
-}
-
 /*--------------------------- HEADER------------------- */
 .header {
   height: 80px;
@@ -361,74 +356,76 @@ body {
 }
 .latest-offers-content {
   width: inherit;
-  display: flex;
-  flex-direction: row;
-}
-.latest-offers-left {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-}
 
-.latest-offers-right {
-  width: 50%;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 264px 264px 264px;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
 }
 
 .latest-offers-item {
   background-color: #ffffff;
-}
-
-.latest-offers-item img {
-}
-
-.shadow {
   border-radius: 32px;
   box-shadow: 0 0 20px -10px black;
   background-color: #ffffff;
-  margin: 36px 8px;
+  overflow: hidden;
   transition: 0.3s;
 }
-
-.shadow:hover {
+.latest-offers-item:hover {
   box-shadow: 0 0 40px -10px black;
-  /* transform: scale(1.01); */
+  transform: translate(2px, 2px);
+}
+.latest-offers-item img {
 }
 
 .latest-offers-square-item {
-  width: 639px;
-  height: 472px;
   padding: 0 42px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
-
-/* .latest-offers-square-item:hover {
-  transform: scale(-1.1);
-} */
+.latest-offers-square-item img {
+  width: 100%;
+}
+.latest-offers-square-item .item-text {
+  margin-top: 30px;
+}
 .latest-offers-item h4 {
   font-size: 32px;
 }
 
 .latest-offers-horisontal-item {
-  width: 639px;
-  height: 270px;
   padding: 0 42px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 3;
 }
 
 .latest-offers-horisontal-item img {
   height: 100%;
 }
-
-.latest-offers-vertical-item {
-  width: 312px;
-  height: 814px;
+.latest-offers-verItem {
   display: flex;
-
   align-items: center;
   justify-content: center;
+
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+.latest-offers-verItem-1 {
+  grid-column-start: 3;
+  grid-column-end: 3;
 }
 
-.latest-offers-vertical-item img {
+.latest-offers-verItem-2 {
+  grid-column-start: 4;
+  grid-column-end: 4;
+}
+
+.latest-offers-verItem img {
   width: 100%;
 }
 
@@ -442,8 +439,6 @@ body {
   margin-bottom: 42px;
 }
 /*--------------------------- MOST SELLED------------------- */
-.most-selled {
-}
 
 .most-selled-items {
   margin-top: 31px;
@@ -455,7 +450,7 @@ body {
   width: 303px;
   height: 397px;
   text-align: justify;
-  /* margin-right: 28px; */
+
   transition: 0.2s;
 }
 
@@ -504,6 +499,9 @@ body {
   transition: 0.3s;
 }
 
+.best-item img {
+  width: 80%;
+}
 .best-item:hover {
   box-shadow: 2px 2px 10px;
   transform: scale(1.01);
@@ -590,6 +588,7 @@ body {
 
 .ideas-img img {
   border-radius: 16px;
+  width: 90%;
 }
 
 .ideas-text {
@@ -818,6 +817,12 @@ footer {
 
 /* -----------------------------ADAPTIVE--------------- */
 @media screen and (max-width: 1024px) {
+  .content {
+    padding: 0 15px;
+  }
+  .latest-offers-horisontal-item img {
+    width: 80%;
+  }
   .ideas-content {
     flex-direction: column;
   }
@@ -849,5 +854,92 @@ footer {
   .ideas-content {
     margin-top: 56px;
     margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 28px;
+    font-size: 12px;
+  }
+  .header-logo {
+    transform: scale(0.8);
+  }
+  .content-header {
+    font-size: 30px;
+    margin: 50px 0 9px 0;
+  }
+  /* ///////// */
+  .slider {
+    width: 95%;
+  }
+  .sliderBtn {
+    padding: 0 10px;
+  }
+  .slider-textBlock {
+    font-size: 14px;
+  }
+  .slider-textBlock h2 {
+    font-size: 30px;
+  }
+  .slider-exploreBtn {
+    width: 120px;
+    height: 40px;
+
+    font-size: 14px;
+  }
+  .slider-tabs {
+    left: 23%;
+  }
+
+  /* ///////// */
+  .latest-offers-content {
+    grid-template-rows: 150px 150px 150px;
+  }
+  .latest-offers-item h4 {
+    font-size: 22px;
+  }
+  .latest-offers-square-item {
+    padding: 0 22px;
+  }
+  .latest-offers-horisontal-item {
+    padding: 0 22px;
+  }
+  .latest-offers-square-item .item-text {
+    margin-top: 0px;
+  }
+  /* ///////// */
+  .best-item {
+    width: 320px;
+    height: 380px;
+    margin-top: 28px;
+    padding-top: 10px;
+  }
+
+  /* ///////// */
+  .ideas-text p {
+    font-size: 18px;
+  }
+  /* ///////// */
+  .search {
+    padding: 0px 15%;
+  }
+  .sign-up {
+    margin: 21px 2% 19px;
+  }
+  /* ///////// */
+
+  .footer-header {
+    font-size: 18px;
+    margin: 44px 0 19px;
+  }
+  .footer-logoAndText {
+    max-width: 305px;
+  }
+
+  .footer-ul li {
+    font-size: 13px;
   }
 }
