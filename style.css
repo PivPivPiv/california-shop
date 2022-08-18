@@ -153,7 +153,7 @@ body {
   bottom: -80px;
   left: 0;
   transform-origin: 0% 0%;
-  z-index: 10;
+  z-index: 50;
   visibility: hidden;
   opacity: 0;
   transform: rotatex(-90deg);
@@ -441,7 +441,6 @@ body {
 /*--------------------------- MOST SELLED------------------- */
 
 .most-selled-items {
-  margin-top: 31px;
   justify-content: space-around;
   flex-wrap: wrap;
 }
@@ -450,7 +449,7 @@ body {
   width: 303px;
   height: 397px;
   text-align: justify;
-
+  margin-top: 31px;
   transition: 0.2s;
 }
 
@@ -833,7 +832,7 @@ footer {
   }
 
   .sign-up {
-    margin: 81px auto 19px;
+    margin: 81px 3% 19px;
   }
   .slider-textBlock h2 {
     font-size: 38px;
@@ -864,8 +863,12 @@ footer {
     margin-bottom: 28px;
     font-size: 12px;
   }
-  .header-logo {
-    transform: scale(0.8);
+
+  .header-nav ul li a {
+    margin: 0 10px;
+  }
+  .header-solutions {
+    width: 100px;
   }
   .content-header {
     font-size: 30px;
@@ -910,6 +913,9 @@ footer {
   .latest-offers-square-item .item-text {
     margin-top: 0px;
   }
+  .latest-offers p {
+    width: 90%;
+  }
   /* ///////// */
   .best-item {
     width: 320px;
@@ -941,5 +947,188 @@ footer {
 
   .footer-ul li {
     font-size: 13px;
+  }
+  .footer {
+    padding: 0 2%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .header-nav {
+    display: block;
+    width: 100%;
+  }
+  .header-logo {
+    margin: 20px 0;
+  }
+  .header nav ul {
+    flex-direction: column;
+  }
+  .header-nav ul li {
+    justify-content: center;
+    width: 100%;
+  }
+  .header-nav ul li a {
+    padding: 5px 0;
+    font-size: 16px;
+  }
+  .header-solutions {
+    width: 100%;
+    font-size: 16px;
+    padding: 5px 0;
+  }
+  .header-searchAndBasketIcons {
+    width: 100%;
+    justify-content: flex-end;
+    position: absolute;
+    top: 12px;
+    right: 10px;
+  }
+  #header-submenu {
+    width: 100%;
+    bottom: -30px;
+  }
+  #sub1 {
+    text-align: center;
+  }
+  .header-submenu-li {
+    margin-bottom: 0;
+  }
+  /* ///////// */
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  .footer-logoAndText {
+    max-width: 100%;
+  }
+  .footer-ul {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* border-bottom: 1px solid grey; */
+    margin: 10px 0;
+  }
+
+  .footer-header {
+    margin: 0 0 10px;
+    display: block;
+    flex-basis: 100%;
+  }
+  .footer-ul li {
+    margin: 0 15px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  }
+  .slider {
+    height: 250px;
+  }
+  .slider-textBlock {
+    font-size: 11px;
+  }
+  .slider-textBlock h2 {
+    font-size: 20px;
+  }
+  .slider-exploreBtn {
+    width: 100px;
+    height: 30px;
+    margin: 20px 0;
+    font-size: 12px;
+  }
+  .slider-tabs {
+    left: 18%;
+  }
+
+  /* ////// */
+  .latest-offers-content {
+    grid-template-rows: 110px 110px 110px;
+    font-size: 12px;
+  }
+  .latest-offers-item h4 {
+    font-size: 16px;
+  }
+  .latest-offers-square-item {
+    padding: 0 18px;
+  }
+  .latest-offers-horisontal-item {
+    padding: 0 18px;
+  }
+
+  /* //// */
+
+  .most-selled-item {
+    width: 300px;
+    height: 370px;
+    margin-top: 20px;
+  }
+  /* //// */
+  .best-items {
+    margin: 20px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .slider {
+    height: 200px;
+  }
+  .slider-textBlock {
+    font-size: 10px;
+    margin-left: 10px;
+  }
+  .slider-textBlock h2 {
+    font-size: 14px;
+  }
+  .slider-exploreBtn {
+    width: 80px;
+    height: 20px;
+    margin: 10px 0;
+    font-size: 10px;
+  }
+  .tab {
+    width: 80px;
+  }
+
+  /* ////// */
+  .latest-offers-content {
+    grid-template-rows: 100px 100px 100px;
+  }
+  .latest-offers-item h4 {
+    font-size: 14px;
+  }
+
+  /* //// */
+
+  .most-selled-item {
+    width: 300px;
+    height: 370px;
+    margin-top: 20px;
+  }
+  /* //// */
+  .best-items {
+    margin: 20px 0 0 0;
+  }
+  .best-item-text h4 {
+    font-size: 22px;
+  }
+  .best-item-btn {
+    width: 140px;
+    height: 40px;
+
+    font-size: 14px;
+  }
+  .best-item {
+    background-color: #f8f9fa;
+    width: 370px;
+    height: 420px;
   }
 }
